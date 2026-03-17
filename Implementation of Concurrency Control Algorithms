@@ -1,0 +1,13 @@
+flag = [False, False]
+turn = 0
+def process(i):
+global turn
+j = 1 - i
+flag[i] = True
+turn = j
+while flag[j] and turn == j:
+pass
+print(f"Process {i} is in critical section")
+flag[i] = False
+process(0)
+process(1)
