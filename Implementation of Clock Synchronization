@@ -1,0 +1,7 @@
+server = 100
+clients = [95, 97, 103]
+print("Server Clock =", server)
+for i in range(len(clients)):
+print(f"Client {i+1} before sync = {clients[i]}")
+clients[i] = server
+print(f"Client {i+1} after sync = {clients[i]}")
