@@ -1,0 +1,8 @@
+tasks = [5, 2, 7, 1, 4]
+load = [0, 0, 0]
+for i, task in enumerate(tasks):
+min_processor = load.index(min(load))
+load[min_processor] += task
+print(f"Task {i+1} assigned to Processor {min_processor+1}")
+for i in range(len(load)):
+print(f"Processor {i+1} Load = {load[i]}")
